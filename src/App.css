@@ -1,11 +1,13 @@
 .stage {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: safe center;
+    justify-content: center;
+    padding: 24px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .stage::before {
