@@ -3,7 +3,7 @@ import type { LyricLine, SongMeta } from '../types'
 export const songMeta: SongMeta = {
   title: 'I saw the moonlight on you',
   artist: 'Samuel Franklin',
-  dedication: 'Victoria Melo',
+  dedication: 'Victória Melo',
   audioSrc: '/audio.mp3',
     coverSrc: 'cover.jpeg'
 }
