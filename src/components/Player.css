@@ -1,7 +1,5 @@
 /* ── Tela de introdução (o "cartão" antes de abrir o presente) ───── */
 .intro {
-  position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,8 +57,6 @@
 
 /* ── Cartão principal do player ───────────────────────────────────── */
 .card {
-  position: relative;
-  z-index: 2;
   width: 100%;
   max-width: 420px;
   max-height: 100%;
