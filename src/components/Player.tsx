@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { LyricLine, SongMeta } from '../types'
 import LyricsView from './LyricsView'
+import MoonBackdrop from './MoonBackdrop'
 import './Player.css'
 
 interface Props {
@@ -68,6 +69,7 @@ export default function Player({ meta, lyrics }: Props) {
 
   return (
     <div className="stage">
+      <MoonBackdrop />
       <audio
         ref={audioRef}
         src={meta.audioSrc}
