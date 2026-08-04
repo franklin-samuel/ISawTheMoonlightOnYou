@@ -24,7 +24,7 @@ export const lyrics: LyricLine[] = [
     { time: 62, text: "I need to let in memories" },
     { time: 65, text: "This feeling full of truth" },
     { time: 74, text: "The sun is setting" },
-    { time: 78, text: "The moon is raising" },
+    { time: 78, text: "The moon is rising" },
     { time: 82, text: "And all I want" },
     { time: 84, text: "Is wake up with you" },
     { time: 89, text: "Make this turn ours" },
