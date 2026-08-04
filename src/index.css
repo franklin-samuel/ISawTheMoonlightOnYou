@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap');
+
+:root {
+  --bg: #0b0a0d;
+  --bg-soft: #131117;
+  --surface: #18151d;
+  --line: rgba(255, 255, 255, 0.08);
+  --ink: #f3ede9;
+  --ink-dim: rgba(243, 237, 233, 0.5);
+  --ink-faint: rgba(243, 237, 233, 0.22);
+  --garnet: #b23a55;
+  --garnet-glow: #e3a6b6;
+  --gold: #c9a24b;
+
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(120% 120% at 50% 0%, #1a1620 0%, var(--bg) 55%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--garnet);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--garnet-glow);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

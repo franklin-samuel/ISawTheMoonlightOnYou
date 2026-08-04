@@ -1,0 +1,244 @@
+/* ── Tela de introdução (o "cartão" antes de abrir o presente) ───── */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  animation: fade-up 0.7s ease both;
+}
+
+.intro__hand {
+  font-family: var(--font-hand);
+  font-size: 28px;
+  color: var(--garnet-glow);
+  margin: 0;
+}
+
+.intro__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.intro__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--garnet), #8a2b41);
+  color: var(--ink);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 12px 30px -12px rgba(178, 58, 85, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.intro__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -12px rgba(178, 58, 85, 0.75);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Cartão principal do player ───────────────────────────────────── */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, var(--surface), var(--bg-soft));
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7);
+  animation: fade-up 0.6s ease both;
+}
+
+.card__art {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.card__header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: var(--garnet-glow);
+  margin: 0 0 2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0;
+  color: var(--ink);
+}
+
+.artist {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ink-dim);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── Disco: elemento de assinatura ────────────────────────────────── */
+.disc {
+  position: relative;
+  width: 132px;
+  height: 132px;
+}
+
+.disc__glow {
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 75, 0.35), transparent 70%);
+  filter: blur(6px);
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.disc--spin .disc__glow {
+  opacity: 1;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.disc__vinyl {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(circle at center, #100e13 0 2px, #1c1922 2px 4px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 6s linear infinite;
+  animation-play-state: paused;
+  overflow: hidden;
+}
+
+.disc--spin .disc__vinyl {
+  animation-play-state: running;
+}
+
+.disc__label {
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--garnet) 0%, #7a2438 70%, #100e13 71%);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.disc__cover {
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* ── Transporte (barra de progresso e play) ───────────────────────── */
+.transport {
+  margin-top: 18px;
+}
+
+.progress {
+  position: relative;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.progress__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), var(--garnet-glow));
+}
+
+.progress__thumb {
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+.transport__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--ink-dim);
+  width: 34px;
+}
+
+.play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  color: var(--bg);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.06);
+}
+
+.play-btn:active {
+  transform: scale(0.96);
+}

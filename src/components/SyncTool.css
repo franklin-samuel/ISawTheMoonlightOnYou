@@ -1,0 +1,139 @@
+.sync {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  font-family: var(--font-body);
+}
+
+.sync h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.sync__hint {
+  color: var(--ink-dim);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sync__hint code {
+  background: var(--surface);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.sync__transport {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.sync__transport button {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sync__mark-btn {
+  background: var(--garnet) !important;
+  border-color: var(--garnet) !important;
+}
+
+.sync__label {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin-bottom: 6px;
+}
+
+.sync__textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  resize: vertical;
+}
+
+.sync__lines {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sync__lines li {
+  display: flex;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--ink-faint);
+  font-size: 14px;
+}
+
+.sync__lines li.done {
+  color: var(--ink-dim);
+}
+
+.sync__lines li.current {
+  color: var(--ink);
+  background: rgba(178, 58, 85, 0.15);
+}
+
+.sync__time {
+  width: 60px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold);
+}
+
+.sync__output {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sync__output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--surface);
+  font-size: 13px;
+}
+
+.sync__output-header button {
+  background: var(--gold);
+  color: #1a1408;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sync__output pre {
+  margin: 0;
+  padding: 14px;
+  font-size: 12.5px;
+  overflow-x: auto;
+  background: var(--bg-soft);
+}
+
+kbd {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+}

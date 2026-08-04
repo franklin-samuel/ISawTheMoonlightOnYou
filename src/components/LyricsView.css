@@ -1,0 +1,59 @@
+.lyrics {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+
+.lyrics__list {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 78px 4px;
+  text-align: center;
+}
+
+.lyrics__list::-webkit-scrollbar {
+  display: none;
+}
+
+.lyrics__line {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--ink-faint);
+  transition: color 0.35s ease, transform 0.35s ease, font-size 0.35s ease;
+}
+
+.lyrics__line--near {
+  color: var(--ink-dim);
+}
+
+.lyrics__line--active {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0 0 22px rgba(227, 166, 182, 0.45);
+}
+
+.lyrics__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 56px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lyrics__fade--top {
+  top: 0;
+  background: linear-gradient(180deg, var(--surface), transparent);
+}
+
+.lyrics__fade--bottom {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--surface), transparent);
+}
