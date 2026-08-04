@@ -29,7 +29,9 @@
   overflow-wrap: break-word;
   word-break: break-word;
   text-wrap: balance;
-  transition: color 0.35s ease, transform 0.35s ease, font-size 0.35s ease;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: color 0.35s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .lyrics__line--near {
@@ -39,8 +41,8 @@
 .lyrics__line--active {
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 20px;
   font-weight: 500;
+  transform: scale(1.32);
   text-shadow: 0 0 22px rgba(227, 166, 182, 0.45);
 }
 
