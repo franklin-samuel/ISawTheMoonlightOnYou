@@ -59,23 +59,29 @@
 .card {
   width: 100%;
   max-width: 420px;
+  max-height: 100%;
   background: linear-gradient(180deg, var(--surface), var(--bg-soft));
   border: 1px solid var(--line);
   border-radius: 28px;
-  padding: 32px 28px 26px;
+  padding: clamp(18px, 4.5vh, 32px) clamp(20px, 6vw, 28px) clamp(16px, 3.5vh, 26px);
   box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7);
   animation: fade-up 0.6s ease both;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__art {
   display: flex;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: clamp(10px, 3vh, 22px);
+  flex-shrink: 0;
 }
 
 .card__header {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: clamp(10px, 3vh, 22px);
+  flex-shrink: 0;
 }
 
 .eyebrow {
@@ -104,8 +110,8 @@
 /* ── Disco: elemento de assinatura ────────────────────────────────── */
 .disc {
   position: relative;
-  width: 132px;
-  height: 132px;
+  width: clamp(84px, 20vh, 132px);
+  height: clamp(84px, 20vh, 132px);
 }
 
 .disc__glow {
@@ -177,7 +183,8 @@
 
 /* ── Transporte (barra de progresso e play) ───────────────────────── */
 .transport {
-  margin-top: 18px;
+  margin-top: clamp(10px, 2.4vh, 18px);
+  flex-shrink: 0;
 }
 
 .progress {

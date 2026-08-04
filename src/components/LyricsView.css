@@ -1,22 +1,24 @@
 .lyrics {
   position: relative;
-  height: 190px;
+  flex: 1;
+  min-height: 0;
+  height: clamp(110px, 24vh, 190px);
+  overflow: hidden;
+}
+
+.lyrics__viewport {
+  height: 100%;
   overflow: hidden;
 }
 
 .lyrics__list {
-  height: 100%;
-  overflow-y: auto;
-  scrollbar-width: none;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 78px 4px;
+  padding: 4px;
   text-align: center;
-}
-
-.lyrics__list::-webkit-scrollbar {
-  display: none;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .lyrics__line {
@@ -24,6 +26,9 @@
   font-size: 15px;
   line-height: 1.4;
   color: var(--ink-faint);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-wrap: balance;
   transition: color 0.35s ease, transform 0.35s ease, font-size 0.35s ease;
 }
 

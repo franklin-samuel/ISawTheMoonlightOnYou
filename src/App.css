@@ -1,13 +1,13 @@
 .stage {
     width: 100%;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
     display: flex;
-    align-items: safe center;
+    align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: clamp(12px, 4vh, 24px) 20px;
     position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .stage::before {
